@@ -4,6 +4,13 @@ spring:
   application:
     name: test
   datasource:
-    url: jdbc:mysql://192.168.1.209:3309/eoms?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8
     username: root
     password: root
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
