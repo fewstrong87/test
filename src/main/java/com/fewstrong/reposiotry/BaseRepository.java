@@ -17,20 +17,24 @@ import com.fewstrong.reposiotry.support.DataQueryObjectSort;
 
 /**
  *
- * @author caojl
- * @create 2017/11/29
+ * @author fewstorng
  **/
 @NoRepositoryBean
 @Transactional(readOnly=true,rollbackFor = Exception.class)
 public interface BaseRepository<T,ID extends Serializable> extends JpaRepository<T,ID>, JpaSpecificationExecutor<T> {
 	
+//	普通查询
 	List<T> findAll(DataQueryObject query);
 	
+//	分页查询
 	Page<T> findAll(DataQueryObject query, Pageable page);
 
+//	分页查询
 	Page<T> findAll(DataQueryObjectPage dataQueryObjectpage);
 
+//	排序查询
 	List<T> findAll(DataQueryObject dataQueryObject, Sort sort);
 
+//	排序查询
 	List<T> findAll(DataQueryObjectSort dataQueryObjectSort);
 }

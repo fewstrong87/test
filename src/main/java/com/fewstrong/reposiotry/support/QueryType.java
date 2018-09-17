@@ -22,7 +22,7 @@ public enum QueryType {
 	DEFAULT_LIKE(false),
 	NOT_LIKE(false), 
 	IN(false);
-
+//	是否可以为空
 	private boolean isCanBeNull;
 	
 	private QueryType(boolean isCanBeNull) {

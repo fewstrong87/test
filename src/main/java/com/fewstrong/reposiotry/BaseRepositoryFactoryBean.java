@@ -13,8 +13,7 @@ import org.springframework.data.repository.core.support.RepositoryFactorySupport
 
 /**
  *
- * @author caojl
- * @create 2017/11/29
+ * @author fewstrong
  **/
 @SuppressWarnings({"rawtypes","unchecked"})
 public class BaseRepositoryFactoryBean<R extends JpaRepository<T, I>, T,

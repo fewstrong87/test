@@ -16,6 +16,9 @@ public class User {
 
 	@Column(length = 64)
 	private String name;
+	
+	@Column(length = 5)
+	private Integer age;
 
 	public Long getId() {
 		return id;
@@ -31,6 +34,14 @@ public class User {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 }

@@ -36,7 +36,6 @@ import com.fewstrong.reposiotry.support.QueryType;
 /**
  *
  * @author yangliqiang
- * @create 2018-06-06
  **/
 public class BaseRepositoryImpl<T, ID extends Serializable> extends SimpleJpaRepository<T, ID>
 		implements BaseRepository<T, ID>, JpaSpecificationExecutor<T> {
@@ -114,7 +113,7 @@ public class BaseRepositoryImpl<T, ID extends Serializable> extends SimpleJpaRep
 	}
 
 	
-	
+//	核心方法 拼接条件
 	protected Predicate getPredocate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder cb,
 			DataQueryObject dqo) {
 		List<Predicate> predicates = new ArrayList<>();
@@ -261,7 +260,7 @@ public class BaseRepositoryImpl<T, ID extends Serializable> extends SimpleJpaRep
 					break;
 			}
 		}
-		
+//		如果 为空 代表  没有任何有效的条件
 		if(predicates.size() == 0) {
 			return cb.and();
 		}

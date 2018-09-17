@@ -13,8 +13,8 @@ import com.fewstrong.reposiotry.BaseRepositoryFactoryBean;
 @ComponentScan(basePackages = { "com.fewstrong" })
 @EnableAutoConfiguration
 @EntityScan("com.fewstrong")
+// 指定自己的工厂类
 @EnableJpaRepositories(basePackages = "com.fewstrong",
-		// 指定自己的工厂类
 		repositoryFactoryBeanClass = BaseRepositoryFactoryBean.class)
 @SpringBootApplication
 public class TestApplication {
